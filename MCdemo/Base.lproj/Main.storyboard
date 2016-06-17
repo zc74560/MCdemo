@@ -19,26 +19,33 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ZjK-eb-YAH">
-                                <rect key="frame" x="20" y="20" width="374" height="30"/>
+                                <rect key="frame" x="20" y="33" width="374" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UKu-OG-Sqv">
-                                <rect key="frame" x="358" y="58" width="36" height="30"/>
+                                <rect key="frame" x="329" y="82.5" width="65" height="33.5"/>
                                 <state key="normal" title="Send"/>
                                 <connections>
                                     <action selector="sendMessage:" destination="9pv-A4-QxB" eventType="touchUpInside" id="TaL-TB-32b"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CvB-mL-6Ie">
-                                <rect key="frame" x="19" y="58" width="48" height="30"/>
+                                <rect key="frame" x="20" y="82.5" width="65" height="33.5"/>
                                 <state key="normal" title="Cancel"/>
                                 <connections>
                                     <action selector="cancelMessage:" destination="9pv-A4-QxB" eventType="touchUpInside" id="BPK-mz-s9T"/>
                                 </connections>
                             </button>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="91y-G9-u91">
-                                <rect key="frame" x="0.0" y="96" width="414" height="591"/>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DtL-R6-Fsq">
+                                <rect key="frame" x="175" y="82.5" width="65" height="33.5"/>
+                                <state key="normal" title="Clear"/>
+                                <connections>
+                                    <action selector="clearMessage:" destination="9pv-A4-QxB" eventType="touchUpInside" id="04V-Sv-RWm"/>
+                                </connections>
+                            </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="91y-G9-u91">
+                                <rect key="frame" x="0.0" y="137" width="414" height="550"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.59999999999999998" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
@@ -46,7 +53,9 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="DtL-R6-Fsq" firstAttribute="centerX" secondItem="tsR-hK-woN" secondAttribute="centerX" id="47t-vF-7iT"/>
                             <constraint firstItem="ZjK-eb-YAH" firstAttribute="trailing" secondItem="tsR-hK-woN" secondAttribute="trailingMargin" id="HCY-Bx-cSE"/>
+                            <constraint firstItem="4ug-Mw-9AY" firstAttribute="top" secondItem="91y-G9-u91" secondAttribute="bottom" id="Pek-yp-dZT"/>
                             <constraint firstItem="UKu-OG-Sqv" firstAttribute="trailing" secondItem="tsR-hK-woN" secondAttribute="trailingMargin" id="fyG-oI-wXk"/>
                         </constraints>
                     </view>
@@ -73,29 +82,29 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="The device name displayed to others..." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="lno-8R-dPL">
-                                <rect key="frame" x="20" y="20" width="374" height="30"/>
+                                <rect key="frame" x="20" y="30" width="374" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Visible to others?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UTg-h3-kKf">
-                                <rect key="frame" x="20" y="63" width="266" height="21"/>
+                                <rect key="frame" x="20" y="73" width="266" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="ZJL-Ye-ttD">
-                                <rect key="frame" x="0.0" y="130" width="414" height="463"/>
+                                <rect key="frame" x="0.0" y="140" width="414" height="463"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </tableView>
                             <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AZb-OW-0LJ">
-                                <rect key="frame" x="141" y="92" width="132" height="30"/>
+                                <rect key="frame" x="141" y="102" width="132" height="30"/>
                                 <state key="normal" title="Browns for devices"/>
                                 <connections>
                                     <action selector="browseForDevices:" destination="1iP-wh-feh" eventType="touchUpInside" id="Iao-0t-rw9"/>
                                 </connections>
                             </button>
                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="PoB-0o-VEI">
-                                <rect key="frame" x="345" y="58" width="51" height="31"/>
+                                <rect key="frame" x="345" y="68" width="51" height="31"/>
                                 <connections>
                                     <action selector="toggleVisibility:" destination="1iP-wh-feh" eventType="valueChanged" id="SuO-xz-DXI"/>
                                 </connections>

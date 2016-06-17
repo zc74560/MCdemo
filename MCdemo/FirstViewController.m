@@ -60,6 +60,10 @@
     [_txtMessage resignFirstResponder];
 }
 
+- (IBAction)clearMessage:(id)sender {
+    [_tvChat setText:@""];
+}
+
 
 #pragma mark - Private method implementation
 
