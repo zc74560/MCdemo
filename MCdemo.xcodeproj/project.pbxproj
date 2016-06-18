@@ -18,6 +18,14 @@
 		B91215F11D12C3CD002F91FC /* MCdemoUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = B91215F01D12C3CD002F91FC /* MCdemoUITests.m */; };
 		B91216031D12C414002F91FC /* ConnectionsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B91216021D12C414002F91FC /* ConnectionsViewController.m */; };
 		B91216061D12CA83002F91FC /* MCManager.m in Sources */ = {isa = PBXBuildFile; fileRef = B91216051D12CA83002F91FC /* MCManager.m */; };
+		B912161B1D1563DE002F91FC /* CreateQRCode.m in Sources */ = {isa = PBXBuildFile; fileRef = B912160D1D1563DE002F91FC /* CreateQRCode.m */; };
+		B912161C1D1563DE002F91FC /* SystemFunctions.m in Sources */ = {isa = PBXBuildFile; fileRef = B91216111D1563DE002F91FC /* SystemFunctions.m */; };
+		B912161D1D1563DE002F91FC /* QRscanViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B91216131D1563DE002F91FC /* QRscanViewController.m */; };
+		B912161E1D1563DE002F91FC /* ShowQRViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B91216151D1563DE002F91FC /* ShowQRViewController.m */; };
+		B912161F1D1563DE002F91FC /* UIFont+Myfont.m in Sources */ = {isa = PBXBuildFile; fileRef = B91216181D1563DE002F91FC /* UIFont+Myfont.m */; };
+		B91216201D1563DE002F91FC /* UIView+MyView.m in Sources */ = {isa = PBXBuildFile; fileRef = B912161A1D1563DE002F91FC /* UIView+MyView.m */; };
+		B91216221D1566EC002F91FC /* image.bundle in Resources */ = {isa = PBXBuildFile; fileRef = B91216211D1566EC002F91FC /* image.bundle */; };
+		B91216241D1567A4002F91FC /* QR.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B91216231D1567A4002F91FC /* QR.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -60,6 +68,21 @@
 		B91216021D12C414002F91FC /* ConnectionsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ConnectionsViewController.m; sourceTree = "<group>"; };
 		B91216041D12CA83002F91FC /* MCManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCManager.h; sourceTree = "<group>"; };
 		B91216051D12CA83002F91FC /* MCManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCManager.m; sourceTree = "<group>"; };
+		B912160C1D1563DE002F91FC /* CreateQRCode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CreateQRCode.h; sourceTree = "<group>"; };
+		B912160D1D1563DE002F91FC /* CreateQRCode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CreateQRCode.m; sourceTree = "<group>"; };
+		B912160E1D1563DE002F91FC /* Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Header.h; sourceTree = "<group>"; };
+		B91216101D1563DE002F91FC /* SystemFunctions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SystemFunctions.h; sourceTree = "<group>"; };
+		B91216111D1563DE002F91FC /* SystemFunctions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SystemFunctions.m; sourceTree = "<group>"; };
+		B91216121D1563DE002F91FC /* QRscanViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QRscanViewController.h; sourceTree = "<group>"; };
+		B91216131D1563DE002F91FC /* QRscanViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QRscanViewController.m; sourceTree = "<group>"; };
+		B91216141D1563DE002F91FC /* ShowQRViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShowQRViewController.h; sourceTree = "<group>"; };
+		B91216151D1563DE002F91FC /* ShowQRViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShowQRViewController.m; sourceTree = "<group>"; };
+		B91216171D1563DE002F91FC /* UIFont+Myfont.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIFont+Myfont.h"; sourceTree = "<group>"; };
+		B91216181D1563DE002F91FC /* UIFont+Myfont.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIFont+Myfont.m"; sourceTree = "<group>"; };
+		B91216191D1563DE002F91FC /* UIView+MyView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+MyView.h"; sourceTree = "<group>"; };
+		B912161A1D1563DE002F91FC /* UIView+MyView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+MyView.m"; sourceTree = "<group>"; };
+		B91216211D1566EC002F91FC /* image.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = image.bundle; sourceTree = "<group>"; };
+		B91216231D1567A4002F91FC /* QR.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = QR.storyboard; path = QRcode/QR.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -110,6 +133,7 @@
 		B91215C71D12C3CD002F91FC /* MCdemo */ = {
 			isa = PBXGroup;
 			children = (
+				B912160B1D1563DE002F91FC /* QRcode */,
 				B91216011D12C414002F91FC /* ConnectionsViewController.h */,
 				B91216021D12C414002F91FC /* ConnectionsViewController.m */,
 				B91215CB1D12C3CD002F91FC /* AppDelegate.h */,
@@ -118,6 +142,7 @@
 				B91215CF1D12C3CD002F91FC /* FirstViewController.m */,
 				B91215D11D12C3CD002F91FC /* SecondViewController.h */,
 				B91215D21D12C3CD002F91FC /* SecondViewController.m */,
+				B91216231D1567A4002F91FC /* QR.storyboard */,
 				B91215D41D12C3CD002F91FC /* Main.storyboard */,
 				B91215D71D12C3CD002F91FC /* Assets.xcassets */,
 				B91215D91D12C3CD002F91FC /* LaunchScreen.storyboard */,
@@ -153,6 +178,43 @@
 				B91215F21D12C3CD002F91FC /* Info.plist */,
 			);
 			path = MCdemoUITests;
+			sourceTree = "<group>";
+		};
+		B912160B1D1563DE002F91FC /* QRcode */ = {
+			isa = PBXGroup;
+			children = (
+				B91216211D1566EC002F91FC /* image.bundle */,
+				B912160C1D1563DE002F91FC /* CreateQRCode.h */,
+				B912160D1D1563DE002F91FC /* CreateQRCode.m */,
+				B912160E1D1563DE002F91FC /* Header.h */,
+				B912160F1D1563DE002F91FC /* model */,
+				B91216121D1563DE002F91FC /* QRscanViewController.h */,
+				B91216131D1563DE002F91FC /* QRscanViewController.m */,
+				B91216141D1563DE002F91FC /* ShowQRViewController.h */,
+				B91216151D1563DE002F91FC /* ShowQRViewController.m */,
+				B91216161D1563DE002F91FC /* UI */,
+			);
+			path = QRcode;
+			sourceTree = "<group>";
+		};
+		B912160F1D1563DE002F91FC /* model */ = {
+			isa = PBXGroup;
+			children = (
+				B91216101D1563DE002F91FC /* SystemFunctions.h */,
+				B91216111D1563DE002F91FC /* SystemFunctions.m */,
+			);
+			path = model;
+			sourceTree = "<group>";
+		};
+		B91216161D1563DE002F91FC /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				B91216171D1563DE002F91FC /* UIFont+Myfont.h */,
+				B91216181D1563DE002F91FC /* UIFont+Myfont.m */,
+				B91216191D1563DE002F91FC /* UIView+MyView.h */,
+				B912161A1D1563DE002F91FC /* UIView+MyView.m */,
+			);
+			path = UI;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -264,6 +326,8 @@
 				B91215DB1D12C3CD002F91FC /* LaunchScreen.storyboard in Resources */,
 				B91215D81D12C3CD002F91FC /* Assets.xcassets in Resources */,
 				B91215D61D12C3CD002F91FC /* Main.storyboard in Resources */,
+				B91216241D1567A4002F91FC /* QR.storyboard in Resources */,
+				B91216221D1566EC002F91FC /* image.bundle in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -290,9 +354,15 @@
 			files = (
 				B91216031D12C414002F91FC /* ConnectionsViewController.m in Sources */,
 				B91216061D12CA83002F91FC /* MCManager.m in Sources */,
+				B912161C1D1563DE002F91FC /* SystemFunctions.m in Sources */,
+				B91216201D1563DE002F91FC /* UIView+MyView.m in Sources */,
+				B912161D1D1563DE002F91FC /* QRscanViewController.m in Sources */,
 				B91215D31D12C3CD002F91FC /* SecondViewController.m in Sources */,
+				B912161B1D1563DE002F91FC /* CreateQRCode.m in Sources */,
 				B91215CD1D12C3CD002F91FC /* AppDelegate.m in Sources */,
 				B91215D01D12C3CD002F91FC /* FirstViewController.m in Sources */,
+				B912161F1D1563DE002F91FC /* UIFont+Myfont.m in Sources */,
+				B912161E1D1563DE002F91FC /* ShowQRViewController.m in Sources */,
 				B91215CA1D12C3CD002F91FC /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

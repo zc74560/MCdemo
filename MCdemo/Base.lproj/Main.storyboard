@@ -6,7 +6,7 @@
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
-        <!--Chat Box-->
+        <!--聊天窗-->
         <scene sceneID="hNz-n2-bh7">
             <objects>
                 <viewController id="9pv-A4-QxB" customClass="FirstViewController" sceneMemberID="viewController">
@@ -53,13 +53,14 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="91y-G9-u91" firstAttribute="top" secondItem="DtL-R6-Fsq" secondAttribute="bottom" constant="21" id="1Qj-e6-Mnh"/>
                             <constraint firstItem="DtL-R6-Fsq" firstAttribute="centerX" secondItem="tsR-hK-woN" secondAttribute="centerX" id="47t-vF-7iT"/>
                             <constraint firstItem="ZjK-eb-YAH" firstAttribute="trailing" secondItem="tsR-hK-woN" secondAttribute="trailingMargin" id="HCY-Bx-cSE"/>
                             <constraint firstItem="4ug-Mw-9AY" firstAttribute="top" secondItem="91y-G9-u91" secondAttribute="bottom" id="Pek-yp-dZT"/>
                             <constraint firstItem="UKu-OG-Sqv" firstAttribute="trailing" secondItem="tsR-hK-woN" secondAttribute="trailingMargin" id="fyG-oI-wXk"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Chat Box" image="first" id="acW-dT-cKf"/>
+                    <tabBarItem key="tabBarItem" title="聊天窗" image="first" id="acW-dT-cKf"/>
                     <connections>
                         <outlet property="tvChat" destination="91y-G9-u91" id="f4I-Sm-8qp"/>
                         <outlet property="txtMessage" destination="ZjK-eb-YAH" id="uwy-7m-2pl"/>
@@ -67,9 +68,9 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="W5J-7L-Pyd" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="750" y="-468"/>
+            <point key="canvasLocation" x="490" y="-552"/>
         </scene>
-        <!--Connections-->
+        <!--连接-->
         <scene sceneID="O9w-3C-4kb">
             <objects>
                 <viewController id="1iP-wh-feh" customClass="ConnectionsViewController" sceneMemberID="viewController">
@@ -126,7 +127,7 @@
                             <constraint firstItem="ZJL-Ye-ttD" firstAttribute="top" secondItem="AZb-OW-0LJ" secondAttribute="bottom" constant="8" id="zfr-wX-w9T"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Connections" id="55k-hX-aFI"/>
+                    <tabBarItem key="tabBarItem" title="连接" id="55k-hX-aFI"/>
                     <connections>
                         <outlet property="btnDisconnect" destination="q7T-6X-afu" id="fAN-ug-7lf"/>
                         <outlet property="swVisible" destination="PoB-0o-VEI" id="zOE-1m-6S5"/>
@@ -136,47 +137,37 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="h1e-bD-Dex" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="750" y="1162"/>
+            <point key="canvasLocation" x="578" y="1278"/>
+        </scene>
+        <!--二维码-->
+        <scene sceneID="l3c-Et-1aa">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wTv-DM-21m" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <navigationController id="WAF-YZ-bZz" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="二维码" id="LG2-dB-Qqc"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="BcK-7p-FPS">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="8rJ-Kc-sve" kind="relationship" relationship="rootViewController" id="7Qf-vt-3xF"/>
+                    </connections>
+                </navigationController>
+            </objects>
+            <point key="canvasLocation" x="520" y="311"/>
         </scene>
         <!--File Sharing-->
         <scene sceneID="wg7-f3-ORb">
             <objects>
-                <viewController id="8rJ-Kc-sve" customClass="SecondViewController" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="L7p-HK-0SC"/>
-                        <viewControllerLayoutGuide type="bottom" id="Djb-ko-YwX"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="QS5-Rx-YEW">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" text="Second View" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="zEq-FU-wV5">
-                                <rect key="frame" x="102" y="347" width="209.5" height="41.5"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="36"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Loaded by SecondViewController" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NDk-cv-Gan">
-                                <rect key="frame" x="99" y="397" width="215" height="17"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstItem="NDk-cv-Gan" firstAttribute="top" secondItem="zEq-FU-wV5" secondAttribute="bottom" constant="8" symbolic="YES" id="Day-4N-Vmt"/>
-                            <constraint firstItem="NDk-cv-Gan" firstAttribute="centerX" secondItem="zEq-FU-wV5" secondAttribute="centerX" id="JgO-Fn-dHn"/>
-                            <constraint firstAttribute="centerX" secondItem="zEq-FU-wV5" secondAttribute="centerX" id="qqM-NS-xev"/>
-                            <constraint firstAttribute="centerY" secondItem="zEq-FU-wV5" secondAttribute="centerY" id="qzY-Ky-pLD"/>
-                        </constraints>
-                    </view>
-                    <tabBarItem key="tabBarItem" title="File Sharing" image="second" id="cPa-gy-q4n"/>
+                <viewController id="8rJ-Kc-sve" customClass="QRscanViewController" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="File Sharing" image="second" id="dme-PE-7HM"/>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" id="xzo-y7-ZEh"/>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4Nw-L8-lE0" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="750" y="360"/>
+            <point key="canvasLocation" x="1309" y="294"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="yl2-sM-qoP">
@@ -191,13 +182,13 @@
                     </tabBar>
                     <connections>
                         <segue destination="9pv-A4-QxB" kind="relationship" relationship="viewControllers" id="u7Y-xg-7CH"/>
-                        <segue destination="8rJ-Kc-sve" kind="relationship" relationship="viewControllers" id="lzU-1b-eKA"/>
+                        <segue destination="WAF-YZ-bZz" kind="relationship" relationship="viewControllers" id="VKo-dZ-ilC"/>
                         <segue destination="1iP-wh-feh" kind="relationship" relationship="viewControllers" id="Jzj-GK-m7O"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HuB-VB-40B" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="0.0" y="0.0"/>
+            <point key="canvasLocation" x="-405" y="126"/>
         </scene>
     </scenes>
     <resources>
