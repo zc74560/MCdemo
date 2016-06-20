@@ -284,7 +284,7 @@
 				TargetAttributes = {
 					B91215C41D12C3CD002F91FC = {
 						CreatedOnToolsVersion = 7.3.1;
-						DevelopmentTeam = CE5B88UCQ5;
+						DevelopmentTeam = 8QNSQFC4ZK;
 					};
 					B91215E01D12C3CD002F91FC = {
 						CreatedOnToolsVersion = 7.3.1;
@@ -504,9 +504,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = MCdemo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = qdasd;
+				PRODUCT_BUNDLE_IDENTIFIER = remi.test;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -515,9 +516,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = MCdemo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = qdasd;
+				PRODUCT_BUNDLE_IDENTIFIER = remi.test;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
