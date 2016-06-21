@@ -12,7 +12,6 @@
 		B91215D01D12C3CD002F91FC /* FirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B91215CF1D12C3CD002F91FC /* FirstViewController.m */; };
 		B91215D31D12C3CD002F91FC /* SecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B91215D21D12C3CD002F91FC /* SecondViewController.m */; };
 		B91215D61D12C3CD002F91FC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B91215D41D12C3CD002F91FC /* Main.storyboard */; };
-		B91215D81D12C3CD002F91FC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B91215D71D12C3CD002F91FC /* Assets.xcassets */; };
 		B91215DB1D12C3CD002F91FC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B91215D91D12C3CD002F91FC /* LaunchScreen.storyboard */; };
 		B91215E61D12C3CD002F91FC /* MCdemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = B91215E51D12C3CD002F91FC /* MCdemoTests.m */; };
 		B91215F11D12C3CD002F91FC /* MCdemoUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = B91215F01D12C3CD002F91FC /* MCdemoUITests.m */; };
@@ -32,6 +31,7 @@
 		EA48EB271D19067600AC5A96 /* messages.plist in Resources */ = {isa = PBXBuildFile; fileRef = EA48EB211D19067600AC5A96 /* messages.plist */; };
 		EA48EB281D19067600AC5A96 /* NSString+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = EA48EB231D19067600AC5A96 /* NSString+Extension.m */; };
 		EA48EB2B1D19073200AC5A96 /* UIImage+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = EA48EB2A1D19073200AC5A96 /* UIImage+Extension.m */; };
+		EA48EB311D198B1700AC5A96 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EA48EB301D198B1700AC5A96 /* Assets.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,7 +61,6 @@
 		B91215D11D12C3CD002F91FC /* SecondViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SecondViewController.h; sourceTree = "<group>"; };
 		B91215D21D12C3CD002F91FC /* SecondViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SecondViewController.m; sourceTree = "<group>"; };
 		B91215D51D12C3CD002F91FC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		B91215D71D12C3CD002F91FC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B91215DA1D12C3CD002F91FC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B91215DC1D12C3CD002F91FC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B91215E11D12C3CD002F91FC /* MCdemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MCdemoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -100,6 +99,7 @@
 		EA48EB231D19067600AC5A96 /* NSString+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Extension.m"; sourceTree = "<group>"; };
 		EA48EB291D19073200AC5A96 /* UIImage+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Extension.h"; sourceTree = "<group>"; };
 		EA48EB2A1D19073200AC5A96 /* UIImage+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Extension.m"; sourceTree = "<group>"; };
+		EA48EB301D198B1700AC5A96 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -150,6 +150,7 @@
 		B91215C71D12C3CD002F91FC /* MCdemo */ = {
 			isa = PBXGroup;
 			children = (
+				EA48EB301D198B1700AC5A96 /* Assets.xcassets */,
 				EA48EB291D19073200AC5A96 /* UIImage+Extension.h */,
 				EA48EB2A1D19073200AC5A96 /* UIImage+Extension.m */,
 				EA48EB1B1D19067600AC5A96 /* Message.h */,
@@ -172,7 +173,6 @@
 				B91215D21D12C3CD002F91FC /* SecondViewController.m */,
 				B91216231D1567A4002F91FC /* QR.storyboard */,
 				B91215D41D12C3CD002F91FC /* Main.storyboard */,
-				B91215D71D12C3CD002F91FC /* Assets.xcassets */,
 				B91215D91D12C3CD002F91FC /* LaunchScreen.storyboard */,
 				B91215DC1D12C3CD002F91FC /* Info.plist */,
 				B91215C81D12C3CD002F91FC /* Supporting Files */,
@@ -352,10 +352,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				B91215DB1D12C3CD002F91FC /* LaunchScreen.storyboard in Resources */,
-				B91215D81D12C3CD002F91FC /* Assets.xcassets in Resources */,
 				EA48EB271D19067600AC5A96 /* messages.plist in Resources */,
 				B91215D61D12C3CD002F91FC /* Main.storyboard in Resources */,
 				B91216241D1567A4002F91FC /* QR.storyboard in Resources */,
+				EA48EB311D198B1700AC5A96 /* Assets.xcassets in Resources */,
 				B91216221D1566EC002F91FC /* image.bundle in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

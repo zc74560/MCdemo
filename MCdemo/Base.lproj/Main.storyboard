@@ -97,7 +97,7 @@
                             <constraint firstItem="ZcI-w5-RHe" firstAttribute="leading" secondItem="tsR-hK-woN" secondAttribute="leadingMargin" constant="-20" id="ufs-Yo-8ac"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="聊天窗" image="first" id="acW-dT-cKf"/>
+                    <tabBarItem key="tabBarItem" title="聊天窗" image="chat" id="acW-dT-cKf"/>
                     <connections>
                         <outlet property="bottom" destination="9Wh-5n-dbx" id="ruS-19-3UB"/>
                         <outlet property="inputView" destination="ZcI-w5-RHe" id="JKz-Ya-ciC"/>
@@ -180,7 +180,7 @@
                             <constraint firstItem="ZJL-Ye-ttD" firstAttribute="top" secondItem="AZb-OW-0LJ" secondAttribute="bottom" constant="8" id="zfr-wX-w9T"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="连接" image="first" id="55k-hX-aFI"/>
+                    <tabBarItem key="tabBarItem" title="连接" image="link" id="55k-hX-aFI"/>
                     <connections>
                         <outlet property="btnDisconnect" destination="q7T-6X-afu" id="fAN-ug-7lf"/>
                         <outlet property="swVisible" destination="PoB-0o-VEI" id="zOE-1m-6S5"/>
@@ -196,7 +196,7 @@
         <scene sceneID="l3c-Et-1aa">
             <objects>
                 <navigationController id="WAF-YZ-bZz" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="二维码" image="first" id="LG2-dB-Qqc"/>
+                    <tabBarItem key="tabBarItem" title="二维码" image="code" id="LG2-dB-Qqc"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="BcK-7p-FPS">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -246,7 +246,9 @@
     </scenes>
     <resources>
         <image name="Image" width="414" height="58"/>
-        <image name="first" width="30" height="30"/>
+        <image name="chat" width="40" height="40"/>
+        <image name="code" width="40" height="40"/>
+        <image name="link" width="40" height="40"/>
         <image name="second" width="30" height="30"/>
     </resources>
 </document>

@@ -47,8 +47,8 @@
     }
     
     // 2.头像
-    CGFloat iconWidth = 40;
-    CGFloat iconHeight = 40;
+    CGFloat iconWidth = 0;
+    CGFloat iconHeight = 0;
     
     // 2.1 根据信息的发送方调整头像位置
     CGFloat iconX;
