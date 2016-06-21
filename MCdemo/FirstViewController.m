@@ -8,8 +8,11 @@
 
 #import "FirstViewController.h"
 #import "AppDelegate.h"
+#import "Message.h"
+#import "MessageCell.h"
+#import "MessageFrame.h"
 
-@interface FirstViewController ()
+@interface FirstViewController () <UITableViewDataSource, UITableViewDelegate, UITextFieldDelegate>
 
 @property (nonatomic, strong) AppDelegate *appDelegate;
 
@@ -25,9 +28,21 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
     
+     //设置dataSource
+    self.tvChat.dataSource = self;
+    
+     //设置tcChat的delegate
+    self.tvChat.delegate = self;
+    
+    self.tvChat.separatorStyle = UITableViewCellSeparatorStyleNone;
+    // 禁止选中cell
+    [self.tvChat setAllowsSelection:NO];
+    
     _appDelegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];
     
     _txtMessage.delegate = self;
+    
+
     
     [[NSNotificationCenter defaultCenter] addObserver:self
                                              selector:@selector(didReceiveDataWithNotification:)
@@ -37,6 +52,59 @@
                                              selector:@selector(keyboardWillChangeFrame:)
                                                  name:UIKeyboardWillChangeFrameNotification
                                                object:nil];
+}
+
+#pragma mark - dataSource方法
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    return  self.messages.count;
+}
+
+- (UITableViewCell *) tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    MessageCell *cell = [MessageCell cellWithTableView:self.tvChat];
+    cell.messageFrame = self.messages[indexPath.row];
+    
+    return cell;
+}
+
+#pragma mark - 数据加载
+/** 延迟加载plist文件数据 */
+- (NSMutableArray *)messages {
+    if (nil == _messages) {
+        NSArray *dictArray = [NSArray arrayWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"messages.plist" ofType:nil]];
+        
+        NSMutableArray *mdictArray = [NSMutableArray array];
+        for (NSDictionary *dict in dictArray) {
+            Message *message = [Message messageWithDictionary:dict];
+            
+            // 判断是否发送时间与上一条信息的发送时间相同，若是则不用显示了
+            MessageFrame *lastMessageFrame = [mdictArray lastObject];
+            if (lastMessageFrame && [message.time isEqualToString:lastMessageFrame.message.time]) {
+                message.hideTime = YES;
+            }
+            
+            MessageFrame *messageFrame = [[MessageFrame alloc] init];
+            messageFrame.message = message;
+            [mdictArray addObject:messageFrame];
+        }
+        
+        _messages = mdictArray;
+    }
+    
+    return _messages;
+}
+
+#pragma mark - tableView代理方法
+/** 动态设置每个cell的高度 */
+- (CGFloat) tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
+    MessageFrame *messageFrame = self.messages[indexPath.row];
+    return messageFrame.cellHeight;
+}
+
+#pragma mark - scrollView 代理方法
+/** 点击拖曳聊天区的时候，缩回键盘 */
+- (void)scrollViewWillBeginDragging:(UIScrollView *)scrollView {
+    // 1.缩回键盘
+    [self.view endEditing:YES];
 }
 
 - (void)didReceiveMemoryWarning
@@ -66,7 +134,7 @@
     // 添加动画
     //transformY += 20;
     [UIView animateWithDuration:duration animations:^{
-        self.inputView.transform = CGAffineTransformMakeTranslation(0, transformY);
+        self.view.transform = CGAffineTransformMakeTranslation(0, transformY);
     }];
 }
 
@@ -74,7 +142,7 @@
 #pragma mark - UITextField Delegate method implementation
 
 -(BOOL)textFieldShouldReturn:(UITextField *)textField{
-    [self sendMyMessage];
+    [self sendMyMessage:textField.text andType:MessageTypeMe];
     return YES;
 }
 
@@ -82,7 +150,7 @@
 #pragma mark - IBAction method implementation
 
 - (IBAction)sendMessage:(id)sender {
-    [self sendMyMessage];
+    [self sendMyMessage:_txtMessage.text andType:MessageTypeMe];
 }
 
 - (IBAction)cancelMessage:(id)sender {
@@ -90,14 +158,14 @@
 }
 
 - (IBAction)clearMessage:(id)sender {
-    [_tvChat setText:@""];
+//    [_tvChat setText:@""];
 }
 
 
 #pragma mark - Private method implementation
 
--(void)sendMyMessage{
-    NSData *dataToSend = [_txtMessage.text dataUsingEncoding:NSUTF8StringEncoding];
+-(void)sendMyMessage: (NSString *) text andType:(MessageType) type {
+    NSData *dataToSend = [text dataUsingEncoding:NSUTF8StringEncoding];
     NSArray *allPeers = _appDelegate.mcManager.session.connectedPeers;
     NSError *error;
     
@@ -110,9 +178,33 @@
         NSLog(@"%@", [error localizedDescription]);
     }
     
-    [_tvChat setText:[_tvChat.text stringByAppendingString:[NSString stringWithFormat:@"I wrote:\n%@\n\n", _txtMessage.text]]];
+//    [_tvChat setText:[_tvChat.text stringByAppendingString:[NSString stringWithFormat:@"I wrote:\n%@\n\n", _txtMessage.text]]];
+    // 获取当前时间
+    NSDate *date = [NSDate date];
+    NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
+    formatter.dateFormat = @"yyyy-MMM-dd hh:mm:ss";
+    NSString *dateStr = [formatter stringFromDate:date];
+    
+    // 我方发出信息
+    NSDictionary *dict = @{@"text":text,
+                           @"time":dateStr,
+//                           @"name":@"me",
+                           @"type":[NSString stringWithFormat:@"%d", type]};
+    
+    Message *message = [[Message alloc] init];
+    [message setValuesForKeysWithDictionary:dict];
+    MessageFrame *messageFrame = [[MessageFrame alloc] init];
+    messageFrame.message = message;
+    
+    [self.messages addObject:messageFrame];
+    //清空输入框
     [_txtMessage setText:@""];
     [_txtMessage resignFirstResponder];
+    [self.tvChat reloadData];
+    // 滚动到最新的消息
+    NSIndexPath *lastIndexPath = [NSIndexPath indexPathForRow:self.messages.count - 1 inSection:0];
+    [self.tvChat scrollToRowAtIndexPath:lastIndexPath atScrollPosition:UITableViewScrollPositionBottom animated:YES];
+    
 }
 
 
@@ -123,12 +215,31 @@
     NSData *receivedData = [[notification userInfo] objectForKey:@"data"];
     NSString *receivedText = [[NSString alloc] initWithData:receivedData encoding:NSUTF8StringEncoding];
     
-    [_tvChat performSelectorOnMainThread:@selector(setText:) withObject:[_tvChat.text stringByAppendingString:[NSString stringWithFormat:@"%@ wrote:\n%@\n\n", peerDisplayName, receivedText]] waitUntilDone:NO];
+//    [_tvChat performSelectorOnMainThread:@selector(setText:) withObject:[_tvChat.text stringByAppendingString:[NSString stringWithFormat:@"%@ wrote:\n%@\n\n", peerDisplayName, receivedText]] waitUntilDone:NO];
+    // 获取当前时间
+    NSDate *date = [NSDate date];
+    NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
+    formatter.dateFormat = @"yyyy-MMM-dd hh:mm:ss";
+    NSString *dateStr = [formatter stringFromDate:date];
+    
+    NSDictionary *dict = @{@"text":receivedText,
+                           @"time":dateStr,
+                           @"name":peerDisplayName,
+                           @"type":[NSString stringWithFormat:@"%d", MessageTypeOhter]};
+    
+    Message *message = [[Message alloc] init];
+    [message setValuesForKeysWithDictionary:dict];
+    MessageFrame *messageFrame = [[MessageFrame alloc] init];
+    messageFrame.message = message;
+    
+    [self.messages addObject:messageFrame];
+    //更新数据
+    [self.tvChat reloadData];
+    // 滚动到最新的消息
+    NSIndexPath *lastIndexPath = [NSIndexPath indexPathForRow:self.messages.count - 1 inSection:0];
+    [self.tvChat scrollToRowAtIndexPath:lastIndexPath atScrollPosition:UITableViewScrollPositionBottom animated:YES];
+    
 }
 
-//点击空白处退出键盘
-- (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event{
-    [self.view endEditing:YES];
-}
 
 @end

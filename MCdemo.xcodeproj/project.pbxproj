@@ -12,7 +12,6 @@
 		B91215D01D12C3CD002F91FC /* FirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B91215CF1D12C3CD002F91FC /* FirstViewController.m */; };
 		B91215D31D12C3CD002F91FC /* SecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B91215D21D12C3CD002F91FC /* SecondViewController.m */; };
 		B91215D61D12C3CD002F91FC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B91215D41D12C3CD002F91FC /* Main.storyboard */; };
-		B91215D81D12C3CD002F91FC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B91215D71D12C3CD002F91FC /* Assets.xcassets */; };
 		B91215DB1D12C3CD002F91FC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B91215D91D12C3CD002F91FC /* LaunchScreen.storyboard */; };
 		B91215E61D12C3CD002F91FC /* MCdemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = B91215E51D12C3CD002F91FC /* MCdemoTests.m */; };
 		B91215F11D12C3CD002F91FC /* MCdemoUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = B91215F01D12C3CD002F91FC /* MCdemoUITests.m */; };
@@ -26,6 +25,13 @@
 		B91216201D1563DE002F91FC /* UIView+MyView.m in Sources */ = {isa = PBXBuildFile; fileRef = B912161A1D1563DE002F91FC /* UIView+MyView.m */; };
 		B91216221D1566EC002F91FC /* image.bundle in Resources */ = {isa = PBXBuildFile; fileRef = B91216211D1566EC002F91FC /* image.bundle */; };
 		B91216241D1567A4002F91FC /* QR.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B91216231D1567A4002F91FC /* QR.storyboard */; };
+		EA48EB241D19067600AC5A96 /* Message.m in Sources */ = {isa = PBXBuildFile; fileRef = EA48EB1C1D19067600AC5A96 /* Message.m */; };
+		EA48EB251D19067600AC5A96 /* MessageCell.m in Sources */ = {isa = PBXBuildFile; fileRef = EA48EB1E1D19067600AC5A96 /* MessageCell.m */; };
+		EA48EB261D19067600AC5A96 /* MessageFrame.m in Sources */ = {isa = PBXBuildFile; fileRef = EA48EB201D19067600AC5A96 /* MessageFrame.m */; };
+		EA48EB271D19067600AC5A96 /* messages.plist in Resources */ = {isa = PBXBuildFile; fileRef = EA48EB211D19067600AC5A96 /* messages.plist */; };
+		EA48EB281D19067600AC5A96 /* NSString+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = EA48EB231D19067600AC5A96 /* NSString+Extension.m */; };
+		EA48EB2B1D19073200AC5A96 /* UIImage+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = EA48EB2A1D19073200AC5A96 /* UIImage+Extension.m */; };
+		EA48EB311D198B1700AC5A96 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EA48EB301D198B1700AC5A96 /* Assets.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,7 +61,6 @@
 		B91215D11D12C3CD002F91FC /* SecondViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SecondViewController.h; sourceTree = "<group>"; };
 		B91215D21D12C3CD002F91FC /* SecondViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SecondViewController.m; sourceTree = "<group>"; };
 		B91215D51D12C3CD002F91FC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		B91215D71D12C3CD002F91FC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B91215DA1D12C3CD002F91FC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B91215DC1D12C3CD002F91FC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B91215E11D12C3CD002F91FC /* MCdemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MCdemoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -83,6 +88,18 @@
 		B912161A1D1563DE002F91FC /* UIView+MyView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+MyView.m"; sourceTree = "<group>"; };
 		B91216211D1566EC002F91FC /* image.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = image.bundle; sourceTree = "<group>"; };
 		B91216231D1567A4002F91FC /* QR.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = QR.storyboard; path = QRcode/QR.storyboard; sourceTree = "<group>"; };
+		EA48EB1B1D19067600AC5A96 /* Message.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Message.h; sourceTree = "<group>"; };
+		EA48EB1C1D19067600AC5A96 /* Message.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Message.m; sourceTree = "<group>"; };
+		EA48EB1D1D19067600AC5A96 /* MessageCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MessageCell.h; sourceTree = "<group>"; };
+		EA48EB1E1D19067600AC5A96 /* MessageCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MessageCell.m; sourceTree = "<group>"; };
+		EA48EB1F1D19067600AC5A96 /* MessageFrame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MessageFrame.h; sourceTree = "<group>"; };
+		EA48EB201D19067600AC5A96 /* MessageFrame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MessageFrame.m; sourceTree = "<group>"; };
+		EA48EB211D19067600AC5A96 /* messages.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = messages.plist; sourceTree = "<group>"; };
+		EA48EB221D19067600AC5A96 /* NSString+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Extension.h"; sourceTree = "<group>"; };
+		EA48EB231D19067600AC5A96 /* NSString+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Extension.m"; sourceTree = "<group>"; };
+		EA48EB291D19073200AC5A96 /* UIImage+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Extension.h"; sourceTree = "<group>"; };
+		EA48EB2A1D19073200AC5A96 /* UIImage+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Extension.m"; sourceTree = "<group>"; };
+		EA48EB301D198B1700AC5A96 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -133,6 +150,18 @@
 		B91215C71D12C3CD002F91FC /* MCdemo */ = {
 			isa = PBXGroup;
 			children = (
+				EA48EB301D198B1700AC5A96 /* Assets.xcassets */,
+				EA48EB291D19073200AC5A96 /* UIImage+Extension.h */,
+				EA48EB2A1D19073200AC5A96 /* UIImage+Extension.m */,
+				EA48EB1B1D19067600AC5A96 /* Message.h */,
+				EA48EB1C1D19067600AC5A96 /* Message.m */,
+				EA48EB1D1D19067600AC5A96 /* MessageCell.h */,
+				EA48EB1E1D19067600AC5A96 /* MessageCell.m */,
+				EA48EB1F1D19067600AC5A96 /* MessageFrame.h */,
+				EA48EB201D19067600AC5A96 /* MessageFrame.m */,
+				EA48EB211D19067600AC5A96 /* messages.plist */,
+				EA48EB221D19067600AC5A96 /* NSString+Extension.h */,
+				EA48EB231D19067600AC5A96 /* NSString+Extension.m */,
 				B912160B1D1563DE002F91FC /* QRcode */,
 				B91216011D12C414002F91FC /* ConnectionsViewController.h */,
 				B91216021D12C414002F91FC /* ConnectionsViewController.m */,
@@ -144,7 +173,6 @@
 				B91215D21D12C3CD002F91FC /* SecondViewController.m */,
 				B91216231D1567A4002F91FC /* QR.storyboard */,
 				B91215D41D12C3CD002F91FC /* Main.storyboard */,
-				B91215D71D12C3CD002F91FC /* Assets.xcassets */,
 				B91215D91D12C3CD002F91FC /* LaunchScreen.storyboard */,
 				B91215DC1D12C3CD002F91FC /* Info.plist */,
 				B91215C81D12C3CD002F91FC /* Supporting Files */,
@@ -324,9 +352,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				B91215DB1D12C3CD002F91FC /* LaunchScreen.storyboard in Resources */,
-				B91215D81D12C3CD002F91FC /* Assets.xcassets in Resources */,
+				EA48EB271D19067600AC5A96 /* messages.plist in Resources */,
 				B91215D61D12C3CD002F91FC /* Main.storyboard in Resources */,
 				B91216241D1567A4002F91FC /* QR.storyboard in Resources */,
+				EA48EB311D198B1700AC5A96 /* Assets.xcassets in Resources */,
 				B91216221D1566EC002F91FC /* image.bundle in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -354,16 +383,21 @@
 			files = (
 				B91216031D12C414002F91FC /* ConnectionsViewController.m in Sources */,
 				B91216061D12CA83002F91FC /* MCManager.m in Sources */,
+				EA48EB2B1D19073200AC5A96 /* UIImage+Extension.m in Sources */,
+				EA48EB261D19067600AC5A96 /* MessageFrame.m in Sources */,
 				B912161C1D1563DE002F91FC /* SystemFunctions.m in Sources */,
 				B91216201D1563DE002F91FC /* UIView+MyView.m in Sources */,
 				B912161D1D1563DE002F91FC /* QRscanViewController.m in Sources */,
+				EA48EB251D19067600AC5A96 /* MessageCell.m in Sources */,
 				B91215D31D12C3CD002F91FC /* SecondViewController.m in Sources */,
 				B912161B1D1563DE002F91FC /* CreateQRCode.m in Sources */,
 				B91215CD1D12C3CD002F91FC /* AppDelegate.m in Sources */,
 				B91215D01D12C3CD002F91FC /* FirstViewController.m in Sources */,
 				B912161F1D1563DE002F91FC /* UIFont+Myfont.m in Sources */,
 				B912161E1D1563DE002F91FC /* ShowQRViewController.m in Sources */,
+				EA48EB241D19067600AC5A96 /* Message.m in Sources */,
 				B91215CA1D12C3CD002F91FC /* main.m in Sources */,
+				EA48EB281D19067600AC5A96 /* NSString+Extension.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -505,10 +539,12 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = MCdemo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = remi.test;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -517,10 +553,12 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = MCdemo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = remi.test;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};
