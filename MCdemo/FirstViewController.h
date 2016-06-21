@@ -10,9 +10,11 @@
 
 @interface FirstViewController : UIViewController <UITextFieldDelegate>
 @property (weak, nonatomic) IBOutlet UITextField *txtMessage;
-@property (weak, nonatomic) IBOutlet UITextView *tvChat;
+@property (weak, nonatomic) IBOutlet UITableView *tvChat;
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *bottom;
 @property (weak, nonatomic) IBOutlet UIView *inputView;
+/** 信息记录数据 */
+@property(nonatomic, strong) NSMutableArray *messages;
 
 
 - (IBAction)sendMessage:(id)sender;
