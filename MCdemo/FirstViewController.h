@@ -19,7 +19,6 @@
 
 - (IBAction)sendMessage:(id)sender;
 - (IBAction)cancelMessage:(id)sender;
-- (IBAction)clearMessage:(id)sender;
 
 
 @end

@@ -10,7 +10,6 @@
 		B91215CA1D12C3CD002F91FC /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B91215C91D12C3CD002F91FC /* main.m */; };
 		B91215CD1D12C3CD002F91FC /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B91215CC1D12C3CD002F91FC /* AppDelegate.m */; };
 		B91215D01D12C3CD002F91FC /* FirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B91215CF1D12C3CD002F91FC /* FirstViewController.m */; };
-		B91215D31D12C3CD002F91FC /* SecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B91215D21D12C3CD002F91FC /* SecondViewController.m */; };
 		B91215D61D12C3CD002F91FC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B91215D41D12C3CD002F91FC /* Main.storyboard */; };
 		B91215DB1D12C3CD002F91FC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B91215D91D12C3CD002F91FC /* LaunchScreen.storyboard */; };
 		B91215E61D12C3CD002F91FC /* MCdemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = B91215E51D12C3CD002F91FC /* MCdemoTests.m */; };
@@ -58,8 +57,6 @@
 		B91215CC1D12C3CD002F91FC /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		B91215CE1D12C3CD002F91FC /* FirstViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FirstViewController.h; sourceTree = "<group>"; };
 		B91215CF1D12C3CD002F91FC /* FirstViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FirstViewController.m; sourceTree = "<group>"; };
-		B91215D11D12C3CD002F91FC /* SecondViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SecondViewController.h; sourceTree = "<group>"; };
-		B91215D21D12C3CD002F91FC /* SecondViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SecondViewController.m; sourceTree = "<group>"; };
 		B91215D51D12C3CD002F91FC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		B91215DA1D12C3CD002F91FC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B91215DC1D12C3CD002F91FC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -169,8 +166,6 @@
 				B91215CC1D12C3CD002F91FC /* AppDelegate.m */,
 				B91215CE1D12C3CD002F91FC /* FirstViewController.h */,
 				B91215CF1D12C3CD002F91FC /* FirstViewController.m */,
-				B91215D11D12C3CD002F91FC /* SecondViewController.h */,
-				B91215D21D12C3CD002F91FC /* SecondViewController.m */,
 				B91216231D1567A4002F91FC /* QR.storyboard */,
 				B91215D41D12C3CD002F91FC /* Main.storyboard */,
 				B91215D91D12C3CD002F91FC /* LaunchScreen.storyboard */,
@@ -312,7 +307,7 @@
 				TargetAttributes = {
 					B91215C41D12C3CD002F91FC = {
 						CreatedOnToolsVersion = 7.3.1;
-						DevelopmentTeam = 8QNSQFC4ZK;
+						DevelopmentTeam = CE5B88UCQ5;
 					};
 					B91215E01D12C3CD002F91FC = {
 						CreatedOnToolsVersion = 7.3.1;
@@ -389,7 +384,6 @@
 				B91216201D1563DE002F91FC /* UIView+MyView.m in Sources */,
 				B912161D1D1563DE002F91FC /* QRscanViewController.m in Sources */,
 				EA48EB251D19067600AC5A96 /* MessageCell.m in Sources */,
-				B91215D31D12C3CD002F91FC /* SecondViewController.m in Sources */,
 				B912161B1D1563DE002F91FC /* CreateQRCode.m in Sources */,
 				B91215CD1D12C3CD002F91FC /* AppDelegate.m in Sources */,
 				B91215D01D12C3CD002F91FC /* FirstViewController.m in Sources */,
@@ -542,7 +536,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = MCdemo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = remi.test;
+				PRODUCT_BUNDLE_IDENTIFIER = demo.zhaochen;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 			};
@@ -556,7 +550,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = MCdemo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = remi.test;
+				PRODUCT_BUNDLE_IDENTIFIER = demo.zhaochen;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 			};

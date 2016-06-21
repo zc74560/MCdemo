@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15A284" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="49e-Tb-3d3">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="49e-Tb-3d3">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
@@ -38,20 +38,9 @@
                                         <constraints>
                                             <constraint firstAttribute="width" constant="65" id="tbX-15-Gp1"/>
                                         </constraints>
-                                        <state key="normal" title="Clear"/>
-                                        <connections>
-                                            <action selector="clearMessage:" destination="9pv-A4-QxB" eventType="touchUpInside" id="g46-Fu-aqO"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CvB-mL-6Ie">
-                                        <rect key="frame" x="175" y="65" width="65" height="34"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="65" id="Ijw-qE-VCL"/>
-                                            <constraint firstAttribute="height" constant="34" id="fUQ-pI-AIU"/>
-                                        </constraints>
                                         <state key="normal" title="Cancel"/>
                                         <connections>
-                                            <action selector="cancelMessage:" destination="9pv-A4-QxB" eventType="touchUpInside" id="BPK-mz-s9T"/>
+                                            <action selector="cancelMessage:" destination="9pv-A4-QxB" eventType="touchUpInside" id="v44-fe-bvP"/>
                                         </connections>
                                     </button>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ZjK-eb-YAH" userLabel="txtMessage">
@@ -63,7 +52,6 @@
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstItem="Iv5-vz-KH6" firstAttribute="baseline" secondItem="ndH-tZ-DXx" secondAttribute="firstBaseline" id="1ry-Kk-TKM"/>
-                                    <constraint firstItem="CvB-mL-6Ie" firstAttribute="centerX" secondItem="ZjK-eb-YAH" secondAttribute="centerX" id="2HH-tt-k1g"/>
                                     <constraint firstItem="gwX-lU-wXM" firstAttribute="top" secondItem="ZcI-w5-RHe" secondAttribute="top" id="53o-Ag-Wr9"/>
                                     <constraint firstItem="gwX-lU-wXM" firstAttribute="centerX" secondItem="ZjK-eb-YAH" secondAttribute="centerX" id="5zN-GD-50M"/>
                                     <constraint firstItem="ZjK-eb-YAH" firstAttribute="centerX" secondItem="ZcI-w5-RHe" secondAttribute="centerX" id="Eba-Wy-JAe"/>
@@ -78,7 +66,6 @@
                                     <constraint firstItem="Iv5-vz-KH6" firstAttribute="leading" secondItem="ZjK-eb-YAH" secondAttribute="trailing" constant="-65" id="nED-kl-RMQ"/>
                                     <constraint firstItem="ZjK-eb-YAH" firstAttribute="leading" secondItem="ndH-tZ-DXx" secondAttribute="trailing" constant="-65" id="ucN-NL-fhT"/>
                                     <constraint firstItem="ndH-tZ-DXx" firstAttribute="leading" secondItem="ZcI-w5-RHe" secondAttribute="leadingMargin" constant="17" id="vRi-A9-JsV"/>
-                                    <constraint firstItem="CvB-mL-6Ie" firstAttribute="baseline" secondItem="ndH-tZ-DXx" secondAttribute="baseline" id="y6k-W5-YCE"/>
                                 </constraints>
                             </view>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="sL9-Vh-Uoj">
