@@ -234,15 +234,6 @@
     // 滚动到最新的消息
     NSIndexPath *lastIndexPath = [NSIndexPath indexPathForRow:self.messages.count - 1 inSection:0];
     [self.tvChat scrollToRowAtIndexPath:lastIndexPath atScrollPosition:UITableViewScrollPositionBottom animated:YES];
-    
-    UILocalNotification *localNotification=[[UILocalNotification alloc]init];
-    localNotification.timeZone=[NSTimeZone defaultTimeZone];
-    localNotification.alertBody=[NSString stringWithFormat:@"%@",message];
-    localNotification.soundName=UILocalNotificationDefaultSoundName;
-    localNotification.applicationIconBadgeNumber++;
-    
-    [[UIApplication sharedApplication]presentLocalNotificationNow:localNotification];
-    [[UIApplication sharedApplication]cancelLocalNotification:localNotification];
 }
 
 
